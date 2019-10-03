@@ -46,6 +46,8 @@ wget -c https://dl.4kdownload.com/app/4kvideodownloader_4.9.2-1_amd64.deb
 
 wget -c https://d2t3ff60b2tol4.cloudfront.net/builds/insync_3.0.20.40428-bionic_amd64.deb
 
+wget -c https://download.teamviewer.com/download/linux/teamviewer_amd64.deb
+
 ## Instalando pacotes .deb baixados na sessão anterior ##
 
 sudo dpkg -i *.deb
@@ -76,7 +78,13 @@ sudo apt-get install --install-recommends winehq-stable wine-stable wine-stable-
 
 sudo apt-get install libgnutls30:i386 libldap-2.4-2:i386 libgpg-error0:i386 libxml2:i386 libasound2-plugins:i386 libsdl2-2.0-0:i386 libfreetype6:i386 libdbus-1-3:i386 libsqlite3-0:i386 -y
 
-sudo apt-get install git && git config --global user.name "Helton Fábio" && git config --global user.email "heltonfabio@outlook.com"
+sudo apt-get install vim -y
+
+sudo apt-get install git -y && git config --global user.name "Helton Fábio" && git config --global user.email "heltonfabio@outlook.com"
+
+sudo apt-get install zsh curl -y
+
+sudo apt-get install python3.7 -y
 
 ##Instalando pacotes Flatpak ##
 
@@ -96,8 +104,15 @@ sudo snap install vscode --classic
 
 sudo snap install github-desktop --beta --classic
 
-## Finalização, atualização e limpeza##
+## Adicionando a key pro yarn
 
+
+curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+
+echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+
+
+## Finalização, atualização e limpeza##
 
 sudo apt update && sudo apt dist-upgrade -y
 
@@ -107,7 +122,19 @@ sudo apt autoclean
 
 sudo apt autoremove -y
 
+clear
+
 echo "Chegamos ao final"
+
+echo "Não se esqueça de instalar os itens:"
+
+echo "- node (nvm):     https://github.com/nvm-sh/nvm#install--update-script"
+
+echo "- oh-my-zsh:      http://www.boekhoff.info/how-to-install-zsh-and-oh-my-zsh/"
+
+echo "- mysql:          https://tecadmin.net/install-mysql-5-on-ubuntu/"
+
+echo "- yarn (passo 2): https://linuxize.com/post/how-to-install-yarn-on-ubuntu-18-04/"
 
 
 
