@@ -12,3 +12,9 @@ Executar os comandos:
   sudo chmod +x install-gtk-azure-theme.sh
   sudo ./install-gtk-theme.sh
 ```
+
+# Fonte para instalar
+
+```
+  https://github.com/microsoft/cascadia-code/releases
+```
