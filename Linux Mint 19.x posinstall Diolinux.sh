@@ -76,6 +76,8 @@ sudo apt-get install --install-recommends winehq-stable wine-stable wine-stable-
 
 sudo apt-get install libgnutls30:i386 libldap-2.4-2:i386 libgpg-error0:i386 libxml2:i386 libasound2-plugins:i386 libsdl2-2.0-0:i386 libfreetype6:i386 libdbus-1-3:i386 libsqlite3-0:i386 -y
 
+sudo apt-get install git && git config --global user.name "Helton Fábio" && git config --global user.email "heltonfabio@outlook.com"
+
 ##Instalando pacotes Flatpak ##
 
 flatpak install flathub com.obsproject.Studio -y
@@ -84,11 +86,15 @@ flatpak install flathub com.obsproject.Studio -y
 
 sudo snap install spotify
 
-sudo snap install slack --classic
+sudo snap install discord
 
 sudo snap install skype --classic
 
 sudo snap install photogimp
+
+sudo snap install vscode --classic
+
+sudo snap install github-desktop --beta --classic
 
 ## Finalização, atualização e limpeza##
 
